@@ -18,7 +18,7 @@
 <meta property="og:description" content="补题进行中">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-12T04:35:52.000Z">
-<meta property="article:modified_time" content="2020-09-12T04:47:13.632Z">
+<meta property="article:modified_time" content="2020-09-12T09:08:10.684Z">
 <meta property="article:author" content="baddog">
 <meta property="article:tag" content="补题日记">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">5字</span>
+      <span class="post-count">455字</span>
     </span>
   </span>
 
@@ -228,7 +228,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -241,6 +241,15 @@
     
     <p>补题进行中</p>
 <a id="more"></a>
+
+<h1 id="C-Choosing-flowers"><a href="#C-Choosing-flowers" class="headerlink" title="C. Choosing flowers"></a><a target="_blank" rel="noopener" href="https://codeforces.ml/contest/1379/problem/C">C. Choosing flowers</a></h1><p><strong>题意：</strong></p>
+<p>你想去买$n$束花，花店现在一共有$m$种不同的花无限供应，第一次买第$i$束花的时候获得$a_i$的快乐值，后来获得$b_i$的快乐值，问如何购买能使获得的快乐值最大。</p>
+<p><strong>题解：</strong></p>
+<p>最开始的思想必然是贪心的去找一个最大的$b_i$然后把其它大于这个值的$a_i$的花买完了，再回来全部买这一束花，但当我去买两束花的时候，只有这两种花（10,9），（1，10），明显答案是错的。那么贪心不行，那我们再仔细想想，是不是最后只有一种花是重复购买的，而这是必然的，那我们只需要枚举这束花，然后把其它大于它的花都买完，求个最大值。</p>
+<p><strong>AC代码：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//I am so vegetable</span></span><br><span class="line"><span class="comment">//#define err</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FIO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _for(i,a,b) for(int i = (a);i&lt;(b);++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _rfor(i,a,b) for(int i = (a);i&gt;(b);--i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _sfor(p,st) for(auto &amp;p:st)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> endl <span class="meta-string">&#x27;\n&#x27;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> a[N],b[N],c[N];</span><br><span class="line">ll pre[N];</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  FIO;</span><br><span class="line">  <span class="keyword">int</span> T;<span class="built_in">cin</span>&gt;&gt;T;</span><br><span class="line">  <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    _for(i,<span class="number">1</span>,m+<span class="number">1</span>)&#123;</span><br><span class="line">      <span class="built_in">cin</span>&gt;&gt;a[i]&gt;&gt;b[i];</span><br><span class="line">      c[i]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    sort(c+<span class="number">1</span>,c+m+<span class="number">1</span>);</span><br><span class="line">    _for(i,<span class="number">1</span>,m+<span class="number">1</span>)pre[i]=pre[i<span class="number">-1</span>]+c[i];</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    _for(i,<span class="number">1</span>,m+<span class="number">1</span>)&#123;</span><br><span class="line">      ll nn=n;</span><br><span class="line">      <span class="keyword">int</span> pos=lower_bound(c+<span class="number">1</span>,c+m+<span class="number">1</span>,b[i])-c;</span><br><span class="line">      <span class="keyword">int</span> mi=min(n,m-pos+<span class="number">1</span>);</span><br><span class="line">      ll t=pre[m]-pre[m-mi];</span><br><span class="line">      nn-=mi;</span><br><span class="line">      <span class="keyword">if</span>(nn)&#123;</span><br><span class="line">        <span class="keyword">if</span>(pos&gt;m||c[pos]&gt;a[i])&#123;</span><br><span class="line">          t+=a[i];</span><br><span class="line">          nn--;</span><br><span class="line">        &#125;</span><br><span class="line">        t+=nn*b[i];</span><br><span class="line">      &#125;</span><br><span class="line">      ans=max(ans,t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
     
 
     
@@ -376,7 +385,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-Choosing-flowers"><span class="toc-number">1.</span> <span class="toc-text">C. Choosing flowers</span></a></li></ol>
                     </div>
                 </span>
             </div>
