@@ -6,17 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://katoli.github.io">
-  <title>Tag: 补题日记 | 不知名的蒟蒻</title>
+  <title>ccpc 2018 final | 不知名的蒟蒻</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="不知名的蒟蒻">
-<meta property="og:url" content="https://katoli.github.io/tags/%E8%A1%A5%E9%A2%98%E6%97%A5%E8%AE%B0/index.html">
+  <meta name="description" content="记一次训练被爆锤">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ccpc 2018 final">
+<meta property="og:url" content="https://katoli.github.io/2020/09/15/ccpc-2018-final/index.html">
 <meta property="og:site_name" content="不知名的蒟蒻">
+<meta property="og:description" content="记一次训练被爆锤">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wx1.sinaimg.cn/mw1024/007ZTdcVgy1gire591fehj30oe03qt8h.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/mw1024/007ZTdcVgy1gire592di7j30oe03qq2p.jpg">
+<meta property="article:published_time" content="2020-09-15T07:38:13.000Z">
+<meta property="article:modified_time" content="2020-09-15T08:15:22.203Z">
 <meta property="article:author" content="baddog">
+<meta property="article:tag" content="补题日记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wx1.sinaimg.cn/mw1024/007ZTdcVgy1gire591fehj30oe03qt8h.jpg">
   
     <link rel="alternative" href="/atom.xml" title="不知名的蒟蒻" type="application/atom+xml">
   
@@ -186,41 +194,107 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ccpc-2018-final" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      ccpc 2018 final
+    </h1>
+  
+
+
+  
+  
 <a href="/2020/09/15/ccpc-2018-final/" class="archive-article-date">
         <time datetime="2020-09-15T07:38:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-15</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/09/15/ccpc-2018-final/" target="_blank">ccpc 2018 final</a>
   
-    </h1>
-  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">922字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>记一次训练被爆锤</p>
+<a id="more"></a>
+
+<h1 id="G-Pastoral-Life-in-Stardew-Valley"><a href="#G-Pastoral-Life-in-Stardew-Valley" class="headerlink" title="G - Pastoral Life in Stardew Valley"></a><a target="_blank" rel="noopener" href="https://codeforces.ml/gym/102055/problem/G">G - Pastoral Life in Stardew Valley</a></h1><p><strong>题意：</strong></p>
+<p>给你一个$N*M$的矩阵，要你从中选取子矩阵种菜和放置稻草人和种菜，且至少要放一个稻草人，稻草人必须被菜包围，</p>
+<p>即稻草人不能放置在边缘，问一共有多少种放置的方式<strong>（每个子矩阵的放置方式相加的总和）</strong>，答案对1e9+7取模。</p>
+<p><strong>题解：</strong></p>
+<p>我们可以从行列下手，我们先看行，题目的意思就相当于要找两个矩形，且大的必须包围小的，如图，</p>
+<p><img src="https://wx1.sinaimg.cn/mw1024/007ZTdcVgy1gire591fehj30oe03qt8h.jpg" alt="image-20200915154814288"></p>
+<p>其中$A,B$表示大的边界，$C,D$表示小的边界，那么总共有$C_{n}^{4} $种选法，而有特殊的选法，就是小的只占一格，如图，</p>
+<p><img src="https://wx2.sinaimg.cn/mw1024/007ZTdcVgy1gire592di7j30oe03qq2p.jpg" alt="image-20200915155022296"></p>
+<p>那么共有$C_{n}^{3}$种选法，总共有$C_{n}^{4}+C_{n}^{3} $种选法，则列有$C_{m}^{4}+C_{m}^{3} $种，且行列互相约束，满足分步乘法则总共有$(C_{n}^{4}+C_{n}^{3} )*(C_{m}^{4}+C_{m}^{3} )$种。</p>
+<p><strong>AC代码：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//I am so vegetable</span></span><br><span class="line"><span class="comment">//#define err</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FIO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _for(i,a,b) for(int i = (a);i&lt;(b);++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> endl <span class="meta-string">&#x27;\n&#x27;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll x, ll y, <span class="keyword">int</span> MOD)</span> </span>&#123; ll ans = <span class="number">1</span>; <span class="keyword">for</span> (; y &gt; <span class="number">0</span>; y &gt;&gt;= <span class="number">1</span>) &#123; <span class="keyword">if</span> (y &amp; <span class="number">1</span>)ans = ans*x%MOD; x = x*x%MOD; &#125;<span class="keyword">return</span> ans; &#125;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll x, <span class="keyword">int</span> mod = MOD)</span> </span>&#123; <span class="keyword">return</span> qpow(x, mod - <span class="number">2</span>,mod); &#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n==m)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">if</span>(n&lt;m)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  ll ans = <span class="number">1</span>;</span><br><span class="line">  _for(i,n-m+<span class="number">1</span>,n+<span class="number">1</span>)ans*=i,ans%=MOD;</span><br><span class="line">  ll x=<span class="number">1</span>;</span><br><span class="line">  _for(i,<span class="number">1</span>,m+<span class="number">1</span>)x*=i;</span><br><span class="line">  <span class="keyword">return</span> ans*inv(x)%MOD;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  FIO;</span><br><span class="line">  <span class="keyword">int</span> T;<span class="built_in">cin</span>&gt;&gt;T;</span><br><span class="line">  _for(_,<span class="number">1</span>,T+<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;Case &quot;</span>&lt;&lt;_&lt;&lt;<span class="string">&quot;: &quot;</span>;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;<span class="number">3</span>||m&lt;<span class="number">3</span>)<span class="built_in">cout</span>&lt;&lt;<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;(C(n,<span class="number">3</span>)+C(n,<span class="number">4</span>))*(C(m,<span class="number">3</span>)+C(m,<span class="number">4</span>))%MOD;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="L-Ultra-Weak-Goldbach’s-Conjecture-https-codeforces-ml-gym-102055-problem-L"><a href="#L-Ultra-Weak-Goldbach’s-Conjecture-https-codeforces-ml-gym-102055-problem-L" class="headerlink" title="L - Ultra Weak Goldbach’s Conjecture](https://codeforces.ml/gym/102055/problem/L)"></a>L - Ultra Weak Goldbach’s Conjecture](<a target="_blank" rel="noopener" href="https://codeforces.ml/gym/102055/problem/L">https://codeforces.ml/gym/102055/problem/L</a>)</h1><p><strong>题意：</strong></p>
+<p>给出一个特别弱化版的哥德巴赫猜想，即任一一个大于$11$的数都可以拆成$6$个质数相加，先给出询问数字$x$，是否可以把$x$拆成$6$个质数，若可以则输出，否则输出IMPOSSIBLE。</p>
+<p><strong>题解：</strong></p>
+<p>已知歌德巴赫猜想为任一一个大于$2$的偶数都可以拆成2个质数相加，则我们可以想到，如果$x$是奇数的话，就先输出$2\ 2\ 2 \ 3$，然后数就变成了$x-9$为偶数，而我们又知道在$long\ long$的范围内，相邻的质数之间不超过300个数，那直接暴力枚举即可；如果$x$是偶数的话，先输出$2\ 2\ 2\ 2$然后枚举即可。</p>
+<p><strong>AC代码：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//I am so vegetable</span></span><br><span class="line"><span class="comment">//#define err</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FIO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _for(i,a,b) for(int i = (a);i&lt;(b);++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> endl <span class="meta-string">&#x27;\n&#x27;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(ll x)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(ll i=<span class="number">2</span>;i*i&lt;=x;++i)&#123;</span><br><span class="line">    <span class="keyword">if</span>(x%i==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  FIO;</span><br><span class="line">  <span class="keyword">int</span> T;<span class="built_in">cin</span>&gt;&gt;T;</span><br><span class="line">  _for(_,<span class="number">1</span>,T+<span class="number">1</span>)&#123;</span><br><span class="line">    ll n;<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;Case &quot;</span>&lt;&lt;_&lt;&lt;<span class="string">&quot;: &quot;</span>;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">11</span>)<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;IMPOSSIBLE&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(n&amp;<span class="number">1</span>)&#123;</span><br><span class="line">      n-=<span class="number">9</span>;</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;2 2 2 3 &quot;</span>;</span><br><span class="line">      <span class="keyword">for</span>(ll i=<span class="number">2</span>;;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(check(i)&amp;&amp;check(n-i))&#123;</span><br><span class="line">          <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;n-i;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      n-=<span class="number">8</span>;</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;2 2 2 2 &quot;</span>;</span><br><span class="line">      <span class="keyword">for</span>(ll i=<span class="number">2</span>;;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(check(i)&amp;&amp;check(n-i))&#123;</span><br><span class="line">          <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;n-i;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          baddog
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://katoli.github.io/2020/09/15/ccpc-2018-final/" title="ccpc 2018 final" target="_blank">https://katoli.github.io/2020/09/15/ccpc-2018-final/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -232,105 +306,143 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://katoli.github.io/2020/09/15/ccpc-2018-final/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/09/12/Codeforces-Round-657/" class="archive-article-date">
-        <time datetime="2020-09-12T04:35:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/12/Codeforces-Round-657/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Codeforces Round #657</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/09/12/Codeforces-Round-657/" target="_blank">Codeforces Round #657</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">补题日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#G-Pastoral-Life-in-Stardew-Valley"><span class="toc-number">1.</span> <span class="toc-text">G - Pastoral Life in Stardew Valley</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#L-Ultra-Weak-Goldbach%E2%80%99s-Conjecture-https-codeforces-ml-gym-102055-problem-L"><span class="toc-number">2.</span> <span class="toc-text">L - Ultra Weak Goldbach’s Conjecture](https:&#x2F;&#x2F;codeforces.ml&#x2F;gym&#x2F;102055&#x2F;problem&#x2F;L)</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/09/11/Educational-Codeforces-Round-92/" class="archive-article-date">
-        <time datetime="2020-09-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/09/11/Educational-Codeforces-Round-92/" target="_blank">Educational Codeforces Round 92</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">补题日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
+
+
+
+
   
+  <div id="gitment-ctn"></div>
   
-    </div></section>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "ccpc 2018 final" -->
+    var gitment = new Gitment({
+      id: "20200915153813",
+      owner: 'katoli',
+      repo: 'myblog',
+      oauth: {
+        client_id: '8e685dd96819cc12f160',
+        client_secret: '50b3605e0268a3bee560fd0c61833cd6e10b4724',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
   
 
-    
 
 
           </div>
@@ -359,9 +471,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
