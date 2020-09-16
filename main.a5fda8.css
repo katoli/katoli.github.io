@@ -89,7 +89,7 @@ pre .at_rule .keyword{color:#f92672}
 pre .css~* .tag{color:#f92672}
 pre .preprocessor{color:#f92672}
 pre .preprocessor .keyword{color:#f92672}
-pre .title{color:#f92672}
+pre .title{color:#61AEEE}
 /*属性、类、函数的title*/
 pre .attribute,
 pre .built_in{color:#ABB2BF}
