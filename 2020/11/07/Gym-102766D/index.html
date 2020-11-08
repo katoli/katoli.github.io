@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://katoli.github.io">
-  <title>Educational CF 95 Div. 2 | 不知名的蒟蒻</title>
+  <title>Gym - 102766 | 不知名的蒟蒻</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="学习新的trick，从我做起">
+  <meta name="description" content="今天第一次打了gym的题，感觉良好，发现漏洞又得补了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Educational CF 95 Div. 2">
-<meta property="og:url" content="https://katoli.github.io/2020/09/29/Educational-CF-95-Div-2/index.html">
+<meta property="og:title" content="Gym - 102766">
+<meta property="og:url" content="https://katoli.github.io/2020/11/07/Gym-102766D/index.html">
 <meta property="og:site_name" content="不知名的蒟蒻">
-<meta property="og:description" content="学习新的trick，从我做起">
+<meta property="og:description" content="今天第一次打了gym的题，感觉良好，发现漏洞又得补了。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-29T06:37:09.000Z">
-<meta property="article:modified_time" content="2020-09-29T07:06:34.594Z">
+<meta property="article:published_time" content="2020-11-07T11:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-08T07:26:06.151Z">
 <meta property="article:author" content="baddog">
-<meta property="article:tag" content="补题日记">
+<meta property="article:tag" content="训练日记">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="不知名的蒟蒻" type="application/atom+xml">
@@ -191,22 +191,22 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Educational-CF-95-Div-2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Gym-102766D" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Educational CF 95 Div. 2
+      Gym - 102766
     </h1>
   
 
 
   
   
-<a href="/2020/09/29/Educational-CF-95-Div-2/" class="archive-article-date">
-        <time datetime="2020-09-29T06:37:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-29</time>
+<a href="/2020/11/07/Gym-102766D/" class="archive-article-date">
+        <time datetime="2020-11-07T11:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-07</time>
 </a>
 
   
@@ -219,7 +219,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">984字</span>
+      <span class="post-count">22字</span>
     </span>
   </span>
 
@@ -228,7 +228,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -239,28 +239,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>学习新的trick，从我做起</p>
-<a id="more"></a>
-<h1 id="C-Mortal-Kombat-Tower"><a href="#C-Mortal-Kombat-Tower" class="headerlink" title="C.Mortal Kombat Tower"></a><a target="_blank" rel="noopener" href="https://codeforces.ml/contest/1418/problem/C">C.Mortal Kombat Tower</a></h1><p><strong>题意：</strong></p>
-<p>你和你的朋友去爬塔，塔上共有$n$只怪物，他们的等级只有$0,1$，$0$表示容易$1$表示较难，你和你的朋友每回合都可以选择打一只或者打两只，你的朋友如果打$1$的话，需要用掉$1cost$，需要按顺序打完所有怪物才能爬完，问最少的$cost$是多少。</p>
-<p><strong>题解（贪心）：</strong></p>
-<p>看见一很好的想法，第一只怪物无论如何都是你的朋友先手，然后我们考虑之后的$1$的怪物，不难发现，无论如何我们都可以构造出一种方案，使碰到的第一只$1$都是你起手，然后我们看如果只有一只或两只连在一起，则都是你解决，三只就需要你朋友出手，更多的话，就会成一个循环，设有$k$只$1$连在一起，总共要的$cost$就是$\lfloor\frac{3}{k}\rfloor$，然后看看有几段，加起来即可，单次询问时间复杂度为$O(n)$。</p>
-<p><strong>题解（dp）：</strong></p>
-<p>咕咕咕</p>
-<p><strong>AC代码：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//I am so vegetable</span></span><br><span class="line"><span class="comment">//#define err</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FIO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _for(i,a,b) for(int i = (a);i&lt;(b);++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> endl <span class="meta-string">&#x27;\n&#x27;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">200005</span>];</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  FIO;</span><br><span class="line">  <span class="keyword">int</span> T;<span class="built_in">cin</span>&gt;&gt;T;</span><br><span class="line">  <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">    <span class="keyword">int</span> n;<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    _for(i,<span class="number">0</span>,n)<span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">    <span class="keyword">int</span> ans=a[<span class="number">0</span>]==<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123;</span><br><span class="line">      <span class="keyword">if</span>(!a[i])<span class="keyword">continue</span>;</span><br><span class="line">      <span class="keyword">int</span> j=i;</span><br><span class="line">      <span class="keyword">while</span>(j&lt;n&amp;&amp;a[j])++j;</span><br><span class="line">      ans+=(j-i)/<span class="number">3</span>;</span><br><span class="line">      i=j<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="D-Trash-Problem"><a href="#D-Trash-Problem" class="headerlink" title="D.Trash Problem"></a><a target="_blank" rel="noopener" href="https://codeforces.ml/contest/1418/problem/D">D.Trash Problem</a></h1><p><strong>题意：</strong></p>
-<p>现在有一个$x$轴，初始在上面有$n$堆垃圾，现在有以下询问：</p>
-<blockquote>
-<p>$0\ x$删除坐标为$x$的垃圾，保证存在</p>
-<p>$1 x$在坐标$x$上添加一堆垃圾，保证添加之前，该位置没有垃圾</p>
-</blockquote>
-<p>现你可以对一堆垃圾做$x+1$或$x-1$的操作，问最少需要多少次操作能合并成最多只有两堆垃圾。</p>
-<p>先输出初始的最少量操作数，然后每次询问完都需要输出最少操作数。</p>
-<p><strong>题解：</strong></p>
-<p>不难看出需要的操作数是<strong>最大的$x$-最小的$x$-相邻的垃圾间最远的距离</strong>。</p>
-<p>这里我们可以用一个$set$维护垃圾，$multiset$维护最远距离，这里用到了$c++11$的新函数，$next(it),prev(it)$，用途分别是查当前迭代器位置的前一个和后一个。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//I am so vegetable</span></span><br><span class="line"><span class="comment">//#define err</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FIO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IN insert</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _for(i,a,b) for(int i = (a);i&lt;(b);++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> endl <span class="meta-string">&#x27;\n&#x27;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;st;</span><br><span class="line"><span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;ans;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  FIO;</span><br><span class="line">  <span class="keyword">int</span> n,q;<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;q;</span><br><span class="line">  _for(i,<span class="number">0</span>,n)&#123;</span><br><span class="line">    <span class="keyword">int</span> x;<span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">    st.IN(x);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line">  <span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator itt;</span><br><span class="line">  <span class="keyword">if</span>(st.size()&gt;=<span class="number">2</span>)&#123;</span><br><span class="line">    <span class="keyword">for</span>(it=st.begin();it!=st.end();++it)&#123;</span><br><span class="line">      <span class="keyword">if</span>(it!=st.begin())ans.IN(*it-*prev(it));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(st.size()&lt;=<span class="number">2</span>)<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;0\n&quot;</span>;</span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;*st.rbegin()-*st.begin()-*ans.rbegin()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">while</span>(q--)&#123;</span><br><span class="line">    <span class="keyword">int</span> ch,x;<span class="built_in">cin</span>&gt;&gt;ch&gt;&gt;x;</span><br><span class="line">    <span class="keyword">if</span>(ch)&#123;</span><br><span class="line">      st.IN(x);</span><br><span class="line">      it=st.find(x);</span><br><span class="line">      <span class="keyword">if</span>(st.size()&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(it!=st.begin()&amp;&amp;next(it)!=st.end())&#123;</span><br><span class="line">          itt=ans.find(*next(it)-*prev(it));ans.erase(itt);</span><br><span class="line">          ans.IN(*next(it)-*it),ans.IN(*it-*prev(it));</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(it!=st.begin())ans.IN(*it-*prev(it));</span><br><span class="line">        <span class="keyword">else</span> ans.IN(*next(it)-*it);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      it=st.find(x);</span><br><span class="line">      <span class="keyword">if</span>(st.size()==<span class="number">1</span>)st.erase(x);</span><br><span class="line">      <span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="keyword">if</span>(it!=st.begin()&amp;&amp;next(it)!=st.end())&#123;</span><br><span class="line">          itt=ans.find(*next(it)-*it),ans.erase(itt);</span><br><span class="line">          itt=ans.find(*it-*prev(it)),ans.erase(itt);</span><br><span class="line">          ans.IN(*next(it)-*prev(it));</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(it!=st.begin())itt=ans.find(*it-*prev(it)),ans.erase(itt);</span><br><span class="line">        <span class="keyword">else</span> itt=ans.find(*next(it)-*it),ans.erase(itt);</span><br><span class="line">        st.erase(x);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(st.size()&lt;=<span class="number">2</span>)<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;0\n&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;*st.rbegin()-*st.begin()-*ans.rbegin()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <p>今天第一次打了gym的题，感觉良好，发现漏洞又得补了。</p>
 
     
 
@@ -275,7 +254,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://katoli.github.io/2020/09/29/Educational-CF-95-Div-2/" title="Educational CF 95 Div. 2" target="_blank">https://katoli.github.io/2020/09/29/Educational-CF-95-Div-2/</a>
+          <a href="https://katoli.github.io/2020/11/07/Gym-102766D/" title="Gym - 102766" target="_blank">https://katoli.github.io/2020/11/07/Gym-102766D/</a>
         </li>
         
         <li>
@@ -297,7 +276,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">补题日记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">训练日记</a>
         		</li>
       		
 		</ul>
@@ -353,7 +332,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://katoli.github.io/2020/09/29/Educational-CF-95-Div-2/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://katoli.github.io/2020/11/07/Gym-102766D/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -368,18 +347,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/09/29/The-2018-ACM-ICPC-Asia-Qingdao-Regional-Contest/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/07/Educational-Codeforces-Round-97-Rated-for-Div-2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          The 2018 ACM-ICPC Asia Qingdao Regional Contest
+          Educational Codeforces Round 97 (Rated for Div. 2)
         
       </div>
     </a>
   
   
-    <a href="/2020/09/28/CF-673-Div-2-%E9%83%A8%E5%88%86/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CF-673-Div-2-部分</div>
+    <a href="/2020/11/03/CF-681-Div-2-%E9%83%A8%E5%88%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CF# 681 Div.2 部分</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -406,7 +385,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-Mortal-Kombat-Tower"><span class="toc-number">1.</span> <span class="toc-text">C.Mortal Kombat Tower</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#D-Trash-Problem"><span class="toc-number">2.</span> <span class="toc-text">D.Trash Problem</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -433,9 +412,9 @@
     <script src="/lib/gitment.js"></script>
   
   <script>
-    <!-- id: "Educational CF 95 Div. 2" -->
+    <!-- id: "Gym - 102766" -->
     var gitment = new Gitment({
-      id: "20200929143709",
+      id: "20201107190000",
       owner: 'katoli',
       repo: 'myblog',
       oauth: {
