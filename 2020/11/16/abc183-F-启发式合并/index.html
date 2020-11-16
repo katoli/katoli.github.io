@@ -18,7 +18,7 @@
 <meta property="og:description" content="补题？补题！">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-16T08:58:57.000Z">
-<meta property="article:modified_time" content="2020-11-16T09:02:00.396Z">
+<meta property="article:modified_time" content="2020-11-16T09:13:58.990Z">
 <meta property="article:author" content="baddog">
 <meta property="article:tag" content="补题日记">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">4字</span>
+      <span class="post-count">472字</span>
     </span>
   </span>
 
@@ -228,7 +228,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -241,6 +241,17 @@
     
     <p>补题？补题！</p>
 <a id="more"></a>
+<p><strong>题意：</strong></p>
+<p>现在有$n$个小孩，他们分别属于$C_i$班级，初始的时候他们分别属于自己的小组，现在有如下两个操作：</p>
+<blockquote>
+<p>1、1 x y：将x和y所属的小组合并在一起</p>
+<p>2、2 x y：输出y班级中和x一个小组的人数。</p>
+</blockquote>
+<p><strong>题解：</strong></p>
+<p>这题就是一个一眼并查集的题，我们用一个$map$的数组存一下每个小组里面班级的数量有多少个，然后$1$操作就直接合并，$2$操作输出即可。<strong>但是</strong>，$TLE$了？为啥，并查集不是$log$的操作么，没错，的确是，但是我们要知道，一个小组的人数一多，我们在合并更新的时候，是要去遍历那个小组的班级的，那么时间复杂度就被拉高了，那么我们就需要<strong>启发式合并</strong>了，即<strong>子树小的合并到子树大的里面去</strong>，这很重要，可以极大地建校时间复杂度。</p>
+<p><strong>AC代码：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//I am so vegetable</span></span><br><span class="line"><span class="comment">//#define err</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FIO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FI first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SE second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _for(type,i,a,b) for(type i = (a);i&lt;(b);++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _sfor(p,st) for(auto &amp;p:st)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> endl <span class="meta-string">&#x27;\n&#x27;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">2e5</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> fa[N];</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;cs[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">  _for(<span class="keyword">int</span>,i,<span class="number">1</span>,n+<span class="number">1</span>)fa[i]=i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> fa[x]==x?x:fa[x]=find(fa[x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">  x=find(x),y=find(y);</span><br><span class="line">  fa[x]=y;</span><br><span class="line">  _sfor(it,cs[x])&#123;</span><br><span class="line">    cs[y][it.FI]+=it.SE;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  FIO;</span><br><span class="line">  <span class="keyword">int</span> n,q;<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;q;</span><br><span class="line">  init(n);</span><br><span class="line">  _for(<span class="keyword">int</span>,i,<span class="number">1</span>,n+<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">int</span> x;<span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">    cs[i][x]++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span>(q--)&#123;</span><br><span class="line">    <span class="keyword">int</span> op,x,y;<span class="built_in">cin</span>&gt;&gt;op&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    <span class="keyword">if</span>(op==<span class="number">1</span>)merge(x,y);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;cs[find(fa[x])][y]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     
 
     
