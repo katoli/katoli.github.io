@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://katoli.github.io/2022/06/24/EDU26/</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://katoli.github.io/2022/06/15/CDQ%E5%88%86%E6%B2%BB/</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://katoli.github.io/2022/06/15/2020-EC-f/</loc>
     
     <lastmod>2022-06-15</lastmod>
@@ -10,13 +24,6 @@
   
   <url>
     <loc>https://katoli.github.io/2021/06/30/CF-1295D/</loc>
-    
-    <lastmod>2022-06-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://katoli.github.io/2022/06/15/CDQ%E5%88%86%E6%B2%BB/</loc>
     
     <lastmod>2022-06-15</lastmod>
     
@@ -270,7 +277,7 @@
 
   <url>
     <loc>https://katoli.github.io/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -278,84 +285,91 @@
   
   <url>
     <loc>https://katoli.github.io/tags/%E7%BB%84%E9%98%9F%E8%AE%AD%E7%BB%83/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/CCPC/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/%E8%A1%A5%E9%A2%98%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/dp/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/%E5%BE%85%E8%A1%A5/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/%E8%AE%AD%E7%BB%83%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/%E5%88%B7%E9%A2%98/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/%E5%8C%BA%E9%97%B4dp/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/1700%E7%99%BE%E9%A2%98%E8%AE%A1%E5%88%92/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/%E8%A1%A5%E9%A2%98/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/Algorithm/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://katoli.github.io/tags/icpc/</loc>
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://katoli.github.io/tags/EDU/</loc>
+    <lastmod>2022-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
